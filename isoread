@@ -131,7 +131,7 @@ extract_iso()
             #
             # Strip leading fields
             #
-            local FILE=`echo $LINE | cut -d" " -f12`
+            local FILE=`echo $LINE | awk '{print $NF}'`
 
             #
             # $ISOINFO to leave .. as a file sometimes
